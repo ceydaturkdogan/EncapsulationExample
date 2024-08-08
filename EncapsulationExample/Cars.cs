@@ -9,12 +9,12 @@ namespace EncapsulationExample
     public class Cars
     {
 
-        private string _mark;
-        private string _type;
-        private string _color;
-        private double _doorNumber;
+        private string _mark; //Marka için tanımlanan field
+        private string _type;//Model için tanımlanan field
+        private string _color;//Renk için tanımlanan field
+        private double _doorNumber;//Kapı sayısı için tanımlanan field
 
-        public double DoorNumber
+        public double DoorNumber //Kapı sayısını alıp içerisinde kapı sayısı kontrolünü yapabilmek için tanımlanan property
         {
             get
             {
@@ -34,7 +34,7 @@ namespace EncapsulationExample
             }
         }
 
-        public Cars(string mark,string type,string color,double doorNumber)
+        public Cars(string mark,string type,string color,double doorNumber) //nesne oluşturuurken verilerin girilmesini sağlayan yapıcı constructor
         {
             _mark = mark;
             _type = type;
@@ -42,7 +42,7 @@ namespace EncapsulationExample
             DoorNumber = doorNumber;
         }
 
-        public void DisplayInfo()
+        public void DisplayInfo() //Bilgileri display eden method
         {
             Console.WriteLine($"Araba Markası:{_mark}\nAraba Modeli:{_type}\nAraba Rengi:{_color}\nArabanın Kapı Sayısı:{DoorNumber}");
         }
